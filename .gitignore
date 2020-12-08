@@ -1,2 +1,7 @@
 .vs/
 packages/
+src/Estudos.Infra/bin/
+src/Estudos.business/bin/
+src/Estudos.AppMVC/bin/
+src/Estudos.AppMVC/App_Data/MeusProdutos.mdf
+src/Estudos.AppMVC/App_Data/MeusProdutos_log.ldf
