@@ -1,0 +1,6 @@
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.business\bin\Debug\Estudos.business.dll
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.business\bin\Debug\Estudos.business.pdb
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.business\obj\Debug\Estudos.business.csprojAssemblyReference.cache
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.business\obj\Debug\Estudos.business.csproj.CoreCompileInputs.cache
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.business\obj\Debug\Estudos.business.dll
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.business\obj\Debug\Estudos.business.pdb

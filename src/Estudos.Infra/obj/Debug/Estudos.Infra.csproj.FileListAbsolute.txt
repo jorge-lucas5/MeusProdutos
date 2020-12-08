@@ -1,0 +1,9 @@
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\bin\Debug\Estudos.Infra.dll
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\bin\Debug\Estudos.Infra.pdb
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\bin\Debug\Estudos.business.dll
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\bin\Debug\Estudos.business.pdb
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\obj\Debug\Estudos.Infra.csprojAssemblyReference.cache
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\obj\Debug\Estudos.Infra.csproj.CoreCompileInputs.cache
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\obj\Debug\Estudos.Infra.csproj.CopyComplete
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\obj\Debug\Estudos.Infra.dll
+D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.Infra\obj\Debug\Estudos.Infra.pdb
