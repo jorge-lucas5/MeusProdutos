@@ -6,9 +6,9 @@ using Estudos.Infra.Data.Mappings;
 
 namespace Estudos.Infra.Data.Context
 {
-    public class Context : DbContext
+    public class MyContext : DbContext
     {
-        public Context() : base("DbConnection")
+        public MyContext() : base("DbConnection")
         {
 
             Configuration.ProxyCreationEnabled = false;

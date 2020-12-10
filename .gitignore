@@ -5,3 +5,6 @@ src/Estudos.business/bin/
 src/Estudos.AppMVC/bin/
 src/Estudos.AppMVC/App_Data/MeusProdutos.mdf
 src/Estudos.AppMVC/App_Data/MeusProdutos_log.ldf
+src/Estudos.AppMVC/obj/Debug/Estudos.AppMVC.csprojAssemblyReference.cache
+src/Estudos.business/obj/
+src/Estudos.Infra/obj/

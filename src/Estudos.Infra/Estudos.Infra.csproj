@@ -51,11 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\Context\Context.cs" />
+    <Compile Include="Data\Context\MyContext.cs" />
     <Compile Include="Data\Mappings\ProdutoConfig.cs" />
     <Compile Include="Data\Mappings\EnderecoConfig.cs" />
     <Compile Include="Data\Mappings\FornecedorConfig.cs" />
     <Compile Include="Data\Migrations\Configuration.cs" />
+    <Compile Include="Data\Repository\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
