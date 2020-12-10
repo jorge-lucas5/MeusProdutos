@@ -24,6 +24,6 @@ namespace Estudos.business.Models.Produtos
         /// </summary>
         /// <param name="id">id do produto</param>
         /// <returns></returns>
-        Task<IEnumerable<Produto>> ObterProdutoFornecedor(Guid id);
+        Task<Produto> ObterProdutoFornecedor(Guid id);
     }
 }
