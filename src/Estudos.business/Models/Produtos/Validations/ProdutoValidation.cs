@@ -1,6 +1,6 @@
 ﻿using FluentValidation;
 
-namespace DevIO.Business.Models.Produtos.Validations
+namespace Estudos.business.Models.Produtos.Validations
 {
     public class ProdutoValidation : AbstractValidator<Produto>
     {
