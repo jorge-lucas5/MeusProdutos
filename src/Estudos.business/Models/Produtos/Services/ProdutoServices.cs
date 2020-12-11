@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Threading.Tasks;
+using Estudos.business.Core.Notificacao;
 using Estudos.business.Core.Services;
 using Estudos.business.Models.Produtos.Validations;
 
@@ -9,7 +10,8 @@ namespace Estudos.business.Models.Produtos.Services
     {
         private readonly IProdutoRepository _produtoRepository;
 
-        public ProdutoServices(IProdutoRepository produtoRepository)
+        public ProdutoServices(IProdutoRepository produtoRepository,INotification notification
+        ) : base(notification)
         {
             _produtoRepository = produtoRepository;
         }

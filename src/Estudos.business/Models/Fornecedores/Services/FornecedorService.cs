@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Linq;
 using System.Threading.Tasks;
+using Estudos.business.Core.Notificacao;
 using Estudos.business.Core.Services;
 using Estudos.business.Models.Fornecedores.Validations;
 
@@ -11,7 +12,10 @@ namespace Estudos.business.Models.Fornecedores.Services
         private readonly IFornecedorRepository _fornecedorRepository;
         private readonly IEnderecoRepository _enderecoRepository;
 
-        public FornecedorService(IFornecedorRepository fornecedorRepository, IEnderecoRepository enderecoRepository)
+        public FornecedorService(IFornecedorRepository fornecedorRepository,
+            IEnderecoRepository enderecoRepository,
+            INotification notification
+            ) : base(notification)
         {
             _fornecedorRepository = fornecedorRepository;
             _enderecoRepository = enderecoRepository;
@@ -39,7 +43,11 @@ namespace Estudos.business.Models.Fornecedores.Services
             var fornecedor = await _fornecedorRepository.ObterFornecedorProdutosEndereco(id);
 
             if (fornecedor.Produtos.Any())
+            {
+                Notificar("O fornecedor possui produtos cadastrados!");
                 return;
+
+            }
 
             if (fornecedor.Endereco != null)
                 await _enderecoRepository.Remover(id);
@@ -56,7 +64,10 @@ namespace Estudos.business.Models.Fornecedores.Services
         {
             var resultado = await _fornecedorRepository.Buscar(f =>
                 f.Documento.Equals(fornecedor.Documento) && !f.Id.Equals(fornecedor.Id));
-            return resultado.Any();
+            if (!resultado.Any())
+                return false;
+            Notificar("Já existe um fornecedor com o documento informado!");
+            return false;
         }
 
         public void Dispose()
