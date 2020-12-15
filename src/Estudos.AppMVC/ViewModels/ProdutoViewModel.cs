@@ -28,8 +28,8 @@ namespace Estudos.AppMVC.ViewModels
         public string Descricao { get; set; }
         public string Imagem { get; set; }
 
-        [DisplayName("Imagem do produto")]
-        public HttpPostedFileBase ImagemUpload { get; set; }
+        //[DisplayName("Imagem do produto")]
+        //public HttpPostedFileBase ImagemUpload { get; set; }
         
         [Required(ErrorMessage = "O campo {0} é obrigatório")]
         public decimal Valor { get; set; }
@@ -39,9 +39,9 @@ namespace Estudos.AppMVC.ViewModels
         [DisplayName("Atio?")]
         public bool Ativo { get; set; }
 
-        public FornecedorViewModel Fornecedor { get; set; }
+        //public FornecedorViewModel Fornecedor { get; set; }
 
-        public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
+        //public IEnumerable<FornecedorViewModel> Fornecedores { get; set; }
 
     }
 }
