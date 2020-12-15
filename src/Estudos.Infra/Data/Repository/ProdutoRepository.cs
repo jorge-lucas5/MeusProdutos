@@ -4,12 +4,13 @@ using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
 using Estudos.business.Models.Produtos;
+using Estudos.Infra.Data.Context;
 
 namespace Estudos.Infra.Data.Repository
 {
     public class ProdutoRepository : Repository<Produto>, IProdutoRepository
     {
-
+        public ProdutoRepository(MyContext context) : base(context) { }
         public async Task<Produto> ObterProdutoFornecedor(Guid id)
         {
             return await Db.Produto.AsNoTracking().Include(f => f.Fornecedor)

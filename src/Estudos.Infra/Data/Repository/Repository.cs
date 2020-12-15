@@ -15,9 +15,9 @@ namespace Estudos.Infra.Data.Repository
         protected readonly MyContext Db;
         protected readonly DbSet<TEntity> DbSet;
 
-        protected Repository()
+        protected Repository(MyContext context)
         {
-            Db = new MyContext();
+            Db = context;
             DbSet = Db.Set<TEntity>();
         }
 
@@ -26,7 +26,7 @@ namespace Estudos.Infra.Data.Repository
             return await DbSet.AsNoTracking().Where(predicate).ToListAsync();
         }
 
-        
+
         public virtual async Task<TEntity> ObeterPorId(Guid id)
         {
             return await DbSet.FindAsync(id);
@@ -51,7 +51,7 @@ namespace Estudos.Infra.Data.Repository
 
         public virtual async Task Remover(Guid id)
         {
-            Db.Entry(new TEntity{Id = id}).State = EntityState.Deleted;
+            Db.Entry(new TEntity { Id = id }).State = EntityState.Deleted;
             await SaveChanges();
         }
 

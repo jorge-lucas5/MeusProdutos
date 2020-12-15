@@ -6,11 +6,11 @@ using Estudos.business.Models.Produtos.Validations;
 
 namespace Estudos.business.Models.Produtos.Services
 {
-    public class ProdutoServices : BaseService, IProdutoServices
+    public class ProdutoService : BaseService, IProdutoService
     {
         private readonly IProdutoRepository _produtoRepository;
 
-        public ProdutoServices(IProdutoRepository produtoRepository,INotification notification
+        public ProdutoService(IProdutoRepository produtoRepository,INotification notification
         ) : base(notification)
         {
             _produtoRepository = produtoRepository;

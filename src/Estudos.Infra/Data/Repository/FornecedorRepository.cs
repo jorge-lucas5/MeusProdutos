@@ -2,11 +2,13 @@
 using System.Data.Entity;
 using System.Threading.Tasks;
 using Estudos.business.Models.Fornecedores;
+using Estudos.Infra.Data.Context;
 
 namespace Estudos.Infra.Data.Repository
 {
     public class FornecedorRepository : Repository<Fornecedor>, IFornecedorRepository
     {
+        public FornecedorRepository(MyContext context) : base(context) { }
         public async Task<Fornecedor> ObterFornecedorEndereco(Guid id)
         {
             return await Db.Fornecedor.AsNoTracking()

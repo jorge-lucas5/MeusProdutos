@@ -9,23 +9,31 @@ using Estudos.business.Models.Produtos.Services;
 
 namespace Estudos.AppMVC.Controllers
 {
+    [RoutePrefix("produtos")]
     public class ProdutoController : Controller
     {
         private readonly IProdutoRepository _produtoRepository;
-        private readonly IProdutoServices _produtoServices;
+        private readonly IProdutoService _produtoServices;
         private readonly IMapper _mapper;
 
-        public ProdutoController()
+        public ProdutoController(IProdutoRepository produtoRepository,
+                                IProdutoService produtoServices,
+                                IMapper mapper)
         {
-
+            _produtoRepository = produtoRepository;
+            _produtoServices = produtoServices;
+            _mapper = mapper;
         }
+
+        [HttpGet,
+         Route("lista")]
         public async Task<ActionResult> Index()
         {
             var lista = await _produtoRepository.ObeterTodos();
             var produtosVM = _mapper.Map<IEnumerable<ProdutoViewModel>>(lista);
             return View();
         }
-
+        [HttpGet, Route("detalhes/{id:guid}")]
         public async Task<ActionResult> Details(Guid id)
         {
             var produtoViewModel = await ObterProduto(id);
@@ -36,13 +44,14 @@ namespace Estudos.AppMVC.Controllers
             return View(produtoViewModel);
         }
 
+        [HttpGet, Route("novo")]
         public ActionResult Create()
         {
             return View();
         }
 
 
-        [HttpPost]
+        [HttpPost, Route("novo")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Create(ProdutoViewModel produtoViewModel)
         {
@@ -56,7 +65,7 @@ namespace Estudos.AppMVC.Controllers
 
             return View(produtoViewModel);
         }
-
+        [HttpGet, Route("editar/{id:guid}")]
         public async Task<ActionResult> Edit(Guid id)
         {
             var produtoViewModel = await ObterProduto(id);
@@ -67,7 +76,7 @@ namespace Estudos.AppMVC.Controllers
             return View(produtoViewModel);
         }
 
-        [HttpPost]
+        [HttpPost, Route("editar/{id:guid}")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Edit(ProdutoViewModel produtoViewModel)
         {
@@ -80,7 +89,7 @@ namespace Estudos.AppMVC.Controllers
             return View(produtoViewModel);
         }
 
-        // GET: Produto/Delete/5
+        [Route("deletar/{id:guid}"), HttpGet]
         public async Task<ActionResult> Delete(Guid id)
         {
             var produtoViewModel = await ObterProduto(id);
@@ -91,7 +100,7 @@ namespace Estudos.AppMVC.Controllers
             return View(produtoViewModel);
         }
 
-        // POST: Produto/Delete/5
+        [Route("deletar/{id:guid}")]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> DeleteConfirmed(Guid id)
