@@ -36,7 +36,7 @@ namespace Estudos.AppMVC.ViewModels
 
         [ScaffoldColumn(false)]
         public DateTime DataCadastro { get; set; }
-        [DisplayName("Atio?")]
+        [DisplayName("Ativo?")]
         public bool Ativo { get; set; }
 
         //public FornecedorViewModel Fornecedor { get; set; }

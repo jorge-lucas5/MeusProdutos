@@ -31,7 +31,7 @@ namespace Estudos.AppMVC.Controllers
         {
             var lista = await _produtoRepository.ObeterTodos();
             var produtosVM = _mapper.Map<IEnumerable<ProdutoViewModel>>(lista);
-            return View();
+            return View(produtosVM);
         }
         [HttpGet, Route("detalhes/{id:guid}")]
         public async Task<ActionResult> Details(Guid id)

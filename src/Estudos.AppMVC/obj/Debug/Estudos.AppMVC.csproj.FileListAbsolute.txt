@@ -1,2 +1,0 @@
-D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.AppMVC\obj\Debug\Estudos.AppMVC.csprojAssemblyReference.cache
-D:\projetos\estudos\.NET MVC\curso avancado\MeusProdutos\MeusProdutos\src\Estudos.AppMVC\obj\Debug\Estudos.AppMVC.csproj.CoreCompileInputs.cache

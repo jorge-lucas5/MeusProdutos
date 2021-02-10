@@ -18,8 +18,7 @@ namespace Estudos.AppMVC
         public static void RegisterDIContainer()
         {
             var container = new Container();
-
-            container.Options.DefaultLifestyle = new WebRequestLifestyle();
+            container.Options.DefaultScopedLifestyle = new WebRequestLifestyle();
 
             InitializeContainer(container);
 
